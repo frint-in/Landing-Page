@@ -1,0 +1,66 @@
+.Section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100vw;
+  .head {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: black;
+    .number {
+      color: #6100ff;
+    }
+    .business {
+      color: #009387;
+    }
+  }
+  .blocks {
+    width: 90vw;
+    gap: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .block {
+      flex: 1;
+      .heading {
+        font-size: 2rem;
+        font-weight: bold;
+        color: black;
+        margin: 1rem;
+      }
+      .para {
+        color: black;
+        margin: 1rem;
+        text-align: justify;
+
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    height: 100vh;
+    .head {
+      font-size: 2rem;
+      margin: 2rem 1rem;
+    }
+    .blocks {
+      flex-direction: column;
+      width: 50vw;
+      .block {
+        .heading {
+          text-align: center;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 620px) {
+    .blocks {
+      flex-direction: column;
+      width: 75vw;
+    }
+  }
+}

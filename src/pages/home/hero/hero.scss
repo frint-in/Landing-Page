@@ -1,0 +1,79 @@
+.Hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, #000 40%, #006cff 80%);
+  .head {
+    color: white;
+    font-size: 4rem;
+  }
+  .tagline {
+    color: white;
+    font-size: 2.5rem;
+  }
+  .button-div {
+    display: flex;
+    margin: 5rem;
+    gap: 1rem;
+  }
+  .button-outline {
+    margin-top: 1rem;
+    padding: 0.3rem;
+    border-radius: 40px;
+    background: linear-gradient(
+      92.39deg,
+      #0d4aa4 1.92%,
+      #95bfff 15.39%,
+      #004ab8 29.56%,
+      #67a4ff 87.27%,
+      #0042a5 97.86%
+    );
+    cursor: pointer;
+  }
+  .button {
+    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background-color: #004bbb;
+    padding: 0.5rem 2rem;
+    border-radius: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 800px) {
+    .head {
+      font-size: 3rem;
+    }
+    .tagline {
+      font-size: 2rem;
+    }
+    .button {
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+  @media (max-width: 500px) {
+    height: 50vh;
+    .button-div {
+      margin: 2rem;
+    }
+    .head {
+      font-size: 2rem;
+    }
+    .tagline {
+      font-size: 1.5rem;
+    }
+    .button {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.scss";
-// import logo from "/img/logo.png";
+import { Link } from "react-router-dom";
+import logo from "/logo.png";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const scrollThreshold = window.innerHeight * 1;
+      const scrollThreshold = window.innerHeight * 0.9;
       setIsScrolled(scrollPosition > scrollThreshold);
     };
 
@@ -26,17 +27,18 @@ const Navbar = () => {
 
   return (
     <div className={`Navbar ${isScrolled ? "scrolled" : ""}`}>
-      <a
-        href="#"
-        className="link"
-        style={{
-          fontSize: "2rem",
-          cursor: "pointer",
-        }}
+
+      <Link
+        to="/"
+        className="logo"
+        // style={{
+        //   fontSize: "2rem",
+        //   cursor: "pointer",
+        // }}
       >
-        {/* <img src={logo} alt="" /> */}
-        FRINT
-      </a>
+        <img src={logo} alt="" width={120}/>
+        {/* FRINT */}
+      </Link>
 
       <div className="hamburger" onClick={toggleNav}>
         <div className={`line ${isNavOpen ? "open" : ""}`}></div>
@@ -46,25 +48,37 @@ const Navbar = () => {
 
       <ul className={`links ${isNavOpen ? "open" : ""}`}>
         <li className="link">
-          <a href="#">Home</a>
+          <Link className="a" to="/">
+            Home
+          </Link>
         </li>
         <li className="link">
-          <a href="#">Internships</a>
+          <Link className="a" to="/">
+            Internships
+          </Link>
         </li>
         <li className="link">
-          <a href="#">About</a>
+          <Link className="a" to="/">
+            About
+          </Link>
         </li>
         <li className="link">
-          <a href="#">Contact</a>
+          <Link className="a" to="/">
+            Contact
+          </Link>
         </li>
       </ul>
       <div className="auth">
         <div className="link">
+          <Link className="a" to="/auth">
             Log in
+          </Link>
         </div>
-        <button >
+        <div className="button">
+          <Link className="a" to="/auth">
             Register
-        </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -12,9 +12,15 @@
   z-index: 15;
 
   .logo {
-    list-style: none;
-    width: 20%;
-    font-size: 1.3rem;
+    all: unset;
+    color: white;
+    flex: 2;
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
   }
 
   .links {
@@ -22,8 +28,7 @@
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
-    width: 35%;
-    font-size: 1.3rem;
+    flex: 3;
   }
 
   .link {
@@ -33,50 +38,55 @@
     transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
   }
 
-  .link a {
+  .a {
+    font-size: 1.5rem;
     text-decoration: none;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-  }
-
-  .link a:active {
-    transform: translate(-3px, 3px);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    // transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+    transition: 0.3s;
+    &:hover {
+      color: #31ffee;
+      transition: 0.3s;
+    }
+    &:active {
+      transform: translate(-3px, 3px);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
   }
 
   .auth {
-    width: 30%;
+    flex: 2;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: end;
     font-weight: 600;
-    button {
-        all: unset;
-        margin: 0.5rem 1rem;
-        background-color: #0066FF;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 100px;
-    }
   }
-
-  .scrolled {
-    /* background: linear-gradient(114.72deg, #4221AF 1.21%, rgb(92, 57, 205) 50.21%, rgb(87, 48, 212) 74.98%, rgba(56, 6, 218, 1) 92.38%, rgba(58, 44, 103, 0) 128.53%); */
-    background-color: #4221af88;
+  .button {
+    all: unset;
+    text-decoration: none;
+    margin-left: 1rem;
+    background-color: #0066ff;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
   }
-  @media (max-width: 1100px) {
+  
+  @media (max-width: 1200px) {
     .links {
-      width: 50%;
+      flex: 4;
+    }
+    .a {
+      font-size: 1.5rem;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     .links {
       display: none;
     }
     .auth {
-        display: none;
+      display: none;
     }
 
     .hamburger {
@@ -135,14 +145,9 @@
       left: 0;
       width: 100%;
       padding: 2rem;
-      background: linear-gradient(
-        114.72deg,
-        #4221af 1.21%,
-        rgb(92, 57, 205) 50.21%,
-        rgb(87, 48, 212) 74.98%,
-        rgba(56, 6, 218, 1) 92.38%,
-        rgba(58, 44, 103, 0) 128.53%
-      );
+      background-color: #0066ff88;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
       box-shadow: 0 0.5rem 1;
       border-radius: 10px;
     }
@@ -163,4 +168,9 @@
       visibility: visible;
     }
   }
+}
+.scrolled {
+  // background: radial-gradient(-90deg, #00013b 40%, #00429e 80%);
+  background: radial-gradient(circle, #00429e 0%, rgba(0,0,0,1) 100%);
+
 }
