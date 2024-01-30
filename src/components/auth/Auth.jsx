@@ -11,9 +11,24 @@ import {
   FaPhoneAlt,
   FaGraduationCap,
   FaSuitcase,
+  FaEye,
+  FaEyeSlash,
 } from "react-icons/fa";
 
 const Auth = () => {
+  const [eye, setEye] = useState("password");
+  const togglePasswordVisibility = () => {
+    const inputElement = document.getElementById("myInput");
+
+    if (inputElement.type === "password") {
+      inputElement.type = "text";
+      setEye("text");
+    } else {
+      inputElement.type = "password";
+      setEye("password");
+    }
+  };
+
   const [isSignUpMode, setSignUpMode] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -46,7 +61,19 @@ const Auth = () => {
                 <div className="fas">
                   <FaLock fontSize="20" />
                 </div>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" id="myInput" />
+                {eye === "password" ? (
+                  <div>
+                    <FaEye fontSize="20" onClick={togglePasswordVisibility} />
+                  </div>
+                ) : (
+                  <div>
+                    <FaEyeSlash
+                      fontSize="20"
+                      onClick={togglePasswordVisibility}
+                    />
+                  </div>
+                )}
               </div>
               <input type="submit" defaultValue="Login" className="btn solid" />
               <p className="social-text">Or Sign in with social platforms</p>

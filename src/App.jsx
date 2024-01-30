@@ -5,23 +5,28 @@ import Home from "./pages/home/Home";
 import Auth from "./components/auth/Auth";
 import Navbar from "./components/navbar/Navbar";
 
-// Custom component that uses useLocation
-function NavbarWithConditionalRendering() {
-  const location = useLocation();
-  const currentPath = location.pathname;
-
-  return currentPath === "/auth" ? null : <Navbar />;
-}
+const hideNavbarPaths = ["/"];
 
 function App() {
   return (
     <BrowserRouter>
-      <NavbarWithConditionalRendering />
-      <Routes>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
+
+  return (
+    <>
+      {shouldHideNavbar && <Navbar />}
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 
