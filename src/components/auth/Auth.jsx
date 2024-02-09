@@ -17,20 +17,22 @@ import {
 
 const Auth = () => {
   const [eye, setEye] = useState("password");
-  const togglePasswordVisibility = () => {
-    const inputElement = document.getElementById("myInput");
 
-    if (inputElement.type === "password") {
-      inputElement.type = "text";
+  const togglePasswordVisibility = () => {
+    const inputElement1 = document.getElementById("myInput1");
+    const inputElement2 = document.getElementById("myInput2");
+
+    if (inputElement1.type && inputElement2.type === "password") {
+      inputElement1.type = inputElement2.type = "text";
       setEye("text");
     } else {
-      inputElement.type = "password";
+      inputElement1.type = inputElement2.type = "password";
       setEye("password");
     }
   };
 
   const [isSignUpMode, setSignUpMode] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  // const [selectedOption, setSelectedOption] = useState(null);
 
   const handleSignUpClick = () => {
     setSignUpMode(true);
@@ -40,9 +42,9 @@ const Auth = () => {
     setSignUpMode(false);
   };
 
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
-  };
+  // const handleOptionChange = (option) => {
+  //   setSelectedOption(option);
+  // };
 
   return (
     <div className="Auth">
@@ -61,22 +63,18 @@ const Auth = () => {
                 <div className="fas">
                   <FaLock fontSize="20" />
                 </div>
-                <input type="password" placeholder="Password" id="myInput" />
+                <input type="password" placeholder="Password" id="myInput1" />
                 {eye === "password" ? (
-                  <div>
-                    <FaEye fontSize="20" onClick={togglePasswordVisibility} />
-                  </div>
+                  <FaEye className="eye" onClick={togglePasswordVisibility} />
                 ) : (
-                  <div>
-                    <FaEyeSlash
-                      fontSize="20"
-                      onClick={togglePasswordVisibility}
-                    />
-                  </div>
+                  <FaEyeSlash
+                    className="eye"
+                    onClick={togglePasswordVisibility}
+                  />
                 )}
               </div>
               <input type="submit" defaultValue="Login" className="btn solid" />
-              <p className="social-text">Or Sign in with social platforms</p>
+              {/* <p className="social-text">Or Sign in with social platforms</p>
               <div className="social-media">
                 <a href="#" className="social-icon">
                   <FaFacebookF fontSize="20" />
@@ -90,28 +88,22 @@ const Auth = () => {
                 <a href="#" className="social-icon">
                   <FaLinkedinIn fontSize="20" />
                 </a>
-              </div>
+              </div> */}
             </form>
             <form action="#" className="sign-up-form">
               <h2 className="title">Sign up</h2>
               <div className="category">
-                <div
-                  className={`box ${
-                    selectedOption === "student" ? "active" : ""
-                  }`}
-                  id="student"
-                  onChange={() => handleOptionChange("student")}
-                >
-                  <FaGraduationCap fontSize="2rem" />
+                <div className="radio_group">
+                  <input type="radio" name="like" />
+                  <label htmlFor="like">
+                    <FaGraduationCap fontSize="2.5rem" />
+                  </label>
                 </div>
-                <div
-                  className={`box ${
-                    selectedOption === "company" ? "active" : ""
-                  }`}
-                  id="company"
-                  onChange={() => handleOptionChange("company")}
-                >
-                  <FaSuitcase fontSize="2rem" />
+                <div className="radio_group">
+                  <input type="radio" name="like" />
+                  <label htmlFor="like">
+                    <FaSuitcase fontSize="2rem" />
+                  </label>
                 </div>
               </div>
               <div className="input-field">
@@ -136,10 +128,18 @@ const Auth = () => {
                 <div className="fas">
                   <FaLock fontSize="20" />
                 </div>
-                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Password" id="myInput2" />
+                {eye === "password" ? (
+                  <FaEye className="eye" onClick={togglePasswordVisibility} />
+                ) : (
+                  <FaEyeSlash
+                    className="eye"
+                    onClick={togglePasswordVisibility}
+                  />
+                )}
               </div>
               <input type="submit" className="btn" defaultValue="Sign up" />
-              <p className="social-text">Or Sign up with social platforms</p>
+              {/* <p className="social-text">Or Sign up with social platforms</p>
               <div className="social-media">
                 <a href="#" className="social-icon">
                   <FaFacebookF fontSize="20" />
@@ -153,7 +153,7 @@ const Auth = () => {
                 <a href="#" className="social-icon">
                   <FaLinkedinIn fontSize="20" />
                 </a>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>
@@ -173,7 +173,6 @@ const Auth = () => {
                 Sign up
               </button>
             </div>
-            <img src="img/log.svg" className="image" alt="" />
           </div>
           <div className="panel right-panel">
             <div className="content">
@@ -190,7 +189,6 @@ const Auth = () => {
                 Sign in
               </button>
             </div>
-            <img src="img/register.svg" className="image" alt="" />
           </div>
         </div>
       </div>

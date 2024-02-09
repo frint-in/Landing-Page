@@ -3,24 +3,11 @@ import "./section1.scss";
 
 const Section1 = () => {
   const logos = [
-    // "https://i.ibb.co/y8R5qrp/brand-number-one-1.png",
-    // "https://i.ibb.co/3WgLMfR/brand-number-two-1.png",
-    // "https://i.ibb.co/Vp5Q57N/brand-number-three.png",
-    // "https://i.ibb.co/LYhVKBy/brand-number-four-1.png",
-    // "https://i.ibb.co/6gsyP1h/brand-number-five-1.png",
-    // "https://i.ibb.co/Yt15RLr/brand-number-six-1.png",
-    // "https://i.ibb.co/6WTZ118/brand-number-seven-1.png",
-    // "https://i.ibb.co/QPLgPL0/brand-number-eight.png",
-    // "https://i.ibb.co/FKj2H3X/svkcrypto-podcast-500x200.png",
-    // "https://i.ibb.co/wd7FSnZ/brand-number-ten-1.png",
-    // "https://i.ibb.co/fDL9QLz/brand-number-eleven.png",
-    // "https://i.ibb.co/z5YCnWD/brand-number-twelve.png",
-    // Duplicate logos for repetition
-    // Add more logos here if needed
-    "/My3Dmeta.png",
-    "/Poynt.png",
-    "/Unexplored.png",
-    "/Xipaar.png"
+    "/1.png",
+    "/2.png",
+    "/3.png",
+    "/4.png",
+    "/5.png",
   ];
 
   return (
@@ -32,7 +19,7 @@ const Section1 = () => {
         </div>
         <div className="slider">
           <div className="slide-track">
-            {[...Array(10000)].map((_, repeatIndex) => (
+            {[...Array(100)].map((_, repeatIndex) => (
               // Duplicating logos for repetition
               <React.Fragment key={repeatIndex}>
                 {logos.map((logo, index) => (
