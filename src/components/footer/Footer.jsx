@@ -22,17 +22,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="item">
-                <Link to="/about" className="link">
+                <Link to="/internship" className="link">
                   Internships
                 </Link>
               </li>
               <li className="item">
-                <Link to="/board" className="link">
+                <Link to="/about" className="link">
                   About Us
                 </Link>
               </li>
               <li className="item">
-                <Link to="/impact" className="link">
+                <Link to="/blog" className="link">
                   blogs
                 </Link>
               </li>
@@ -56,45 +56,34 @@ const Footer = () => {
                   Profile
                 </Link>
               </li>
-              <li className="#item">
-                <Link to="" className="link">
+              <li className="item">
+                <Link to="#" className="link">
                   Internships
                 </Link>
               </li>
             </ul>
           </div>
-          {/* <div className="box">
-          <label htmlFor="language" className="title">
-            Language
-          </label>
-          <select name="language" id="language" className="dropdown">
-            <option className="dropdown-item">English</option>
-            <option className="dropdown-item">French</option>
-            <option className="dropdown-item">Spanish</option>
-            <option className="dropdown-item">Arabic</option>
-          </select>
-        </div> */}
           <div className="box">
             <h4 className="title">Support</h4>
             <ul className="list">
               <li className="item">
-                <Link to="#" className="link">
+                <Link to="/contact" className="link">
                   Get Help
                 </Link>
               </li>
               <li className="item">
-                <Link to="#" className="link">
+                <Link to="/faq" className="link">
                   FAQs
                 </Link>
               </li>
               <li className="item">
-                <Link to="#" className="link">
+                <Link to="privacy-policy" className="link">
                   Privacy Policy
                 </Link>
               </li>
               <li className="item">
-                <Link to="#" className="link">
-                  Terms of Operation
+                <Link to="terms-conditions" className="link">
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>

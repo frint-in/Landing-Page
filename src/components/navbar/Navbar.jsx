@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const scrollThreshold = window.innerHeight * 0.2;
+      const scrollThreshold = window.innerHeight * 0.1;
       setIsScrolled(scrollPosition > scrollThreshold);
     };
 
@@ -31,10 +31,6 @@ const Navbar = () => {
       <Link
         to="/"
         className="logo"
-        // style={{
-        //   fontSize: "2rem",
-        //   cursor: "pointer",
-        // }}
       >
         <img src={logo} alt="" width={120}/>
         {/* FRINT */}
@@ -48,22 +44,22 @@ const Navbar = () => {
 
       <ul className={`links ${isNavOpen ? "open" : ""}`}>
         <li className="link">
-          <Link className="a" to="/">
-            Home
-          </Link>
-        </li>
-        <li className="link">
-          <Link className="a" to="/">
+          <Link className="a" to="/internship">
             Internships
           </Link>
         </li>
         <li className="link">
-          <Link className="a" to="/">
+          <Link className="a" to="/about">
             About
           </Link>
         </li>
         <li className="link">
-          <Link className="a" to="/">
+          <Link className="a" to="/blog">
+            Blog
+          </Link>
+        </li>
+        <li className="link">
+          <Link className="a" to="/contact">
             Contact
           </Link>
         </li>

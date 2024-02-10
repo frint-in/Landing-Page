@@ -171,6 +171,8 @@
 }
 .scrolled {
   // background: radial-gradient(-90deg, #00013b 40%, #00429e 80%);
-  background: radial-gradient(circle, #00429e 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(circle, #00429e 0%, #000 100%);
+  // background-color: #00a597aa;
+  backdrop-filter: blur(5px);
 
 }
