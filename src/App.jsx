@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Auth from "./components/auth/Auth";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 const hideNavbarPaths = ["/"];
 
@@ -26,6 +27,7 @@ function AppContent() {
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
       </Routes>
+      {shouldHideNavbar && <Footer />}
     </>
   );
 }

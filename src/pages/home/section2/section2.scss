@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   width: 100%;
   overflow-x: hidden;
+  margin-bottom: 2rem;
   .head {
     margin: 3rem 0;
     text-align: center;
@@ -19,96 +20,114 @@
       color: #009387;
     }
   }
+  @media (max-width: 1000px) {
+    .head {
+      font-size: 2rem;
+    }
+  }
   .services {
-    margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 90%;
+
     .service-div {
       border-top: 4px solid #222;
       color: #222;
       margin: 1rem;
       width: 30%;
-      @media (max-width: 960px) {
+      @media (max-width: 1068px) {
         width: 44%;
       }
-      @media (max-width: 535px) {
+      @media (max-width: 600px) {
         width: 100%;
       }
     }
-    .Card {
-      all: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .border-top-black {
       text-align: center;
       font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: auto;
       background-color: #fff;
       border-radius: 5px;
       cursor: pointer;
-      img {
-        width: 100px;
-        margin: 0.5rem;
-      }
-      p {
-        color: #000;
-        margin: 0.5rem;
-      }
-      h2 {
-        margin: 0.5rem;
-      }
-      .explore-btn {
+      .Card {
+        all: unset;
+        height: 40vh;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        margin: 1rem;
-      }
-      .explore-btn a {
-        gap: 0.5rem;
-        width: 6rem;
-        padding: 0.5rem 1rem;
-        text-align: center;
-        display: flex;
         align-items: center;
-        color: #fff;
-        font-weight: bolder;
-        border-radius: 4px;
-        text-decoration: none;
-        &:hover i {
-          margin-left: 5px;
-          transition: 0.18s all ease;
+        // min-width: 400px;
+        width: auto;
+        text-align: justify;
+        @media (max-width: 600px) {
+          height: auto;
         }
-      }
+        img {
+          width: 100px;
+          margin: 0.5rem;
+        }
+        p {
+          color: #05003899;
+          margin: 0.5rem;
+          padding: 0.5rem;
+        }
+        h2 {
+          color: #050038;
+          margin: 0.5rem;
+        }
+        .explore-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 1rem;
+        }
+        .explore-btn a {
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          font-weight: bolder;
+          border-radius: 4px;
+          text-decoration: none;
+          &:hover i {
+            margin-left: 5px;
+            transition: 0.18s all ease;
+          }
+        }
 
-      transition: transform 0.5s;
-
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.15);
-        content: "";
-        opacity: 0;
-        z-index: -1;
-      }
-
-      &:hover,
-      &:focus {
-        transform: scale3d(1.006, 1.006, 1);
+        transition: transform 0.5s;
 
         &::after {
-          opacity: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.15);
+          content: "";
+          opacity: 0;
+          z-index: -1;
+        }
+
+        &:hover,
+        &:focus {
+          transform: scale3d(1.006, 1.006, 1);
+
+          &::after {
+            opacity: 1;
+          }
         }
       }
-      // }
       .border-top-yellow {
         border-top: 4px solid #fcaf4a;
         color: #fcaf4a;
@@ -144,5 +163,18 @@
         }
       }
     }
+  }
+  .link {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4262ff;
+    padding: 1rem 1.5rem;
+    background: #4262ff;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: white;
+    gap: 0.5rem;
   }
 }

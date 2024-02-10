@@ -1,7 +1,7 @@
 import React from "react";
 import "./section2.scss";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowUp, FaArrowRight } from "react-icons/fa";
 
 const Section2 = () => {
   const service = [
@@ -37,27 +37,24 @@ const Section2 = () => {
         <span className="business">Internships</span> with Ease
       </div>
       <div className="services">
-        {service.map((service, index) => (
-          <div className={`service-div border-top-${getRandomOption(index)}`}>
-            {/* <div key={index} className={`border-top-${getRandomOption(index)}`}> */}
-            <Link
-              to={service.link}
-              key={index}
-              className={`Card border-top-${getRandomOption(index)}`}
-            >
-              <img src={service.image} alt="" />
-              <h2>{service.title}</h2>
-              <p>{service.para}</p>
-              <div className="explore-btn">
-                <Link to={service.link} className={`${getRandomOption(index)}`}>
-                  Explore <FaArrowRight />
-                </Link>
-              </div>
-            </Link>
-            {/* </div> */}
+        {service.map((service, id) => (
+          <div className="service-div"  key={id} >
+            <div className="border-top-black">
+              <Link to={service.link} className="Card">
+                <img src={service.image} alt="" />
+                <h2>{service.title}</h2>
+                <p>{service.para}</p>
+                <div className="explore-btn">
+                  <Link to={service.link} className={`${getRandomOption(id)}`}>
+                    Explore <FaArrowRight />
+                  </Link>
+                </div>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
+      <Link to='/login' className="link">Sign up free <FaArrowUp /></Link>
     </div>
   );
 };

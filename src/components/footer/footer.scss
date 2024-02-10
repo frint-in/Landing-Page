@@ -1,0 +1,144 @@
+@import "./viewport.scss";
+
+.Footer {
+  padding: 4rem;
+  margin-top: 2rem;
+
+  @include viewport(phone) {
+    padding: 2rem;
+  }
+
+  color: black;
+  background-color: white;
+
+  .row-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+    @include viewport(tab-port) {
+      justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 60em) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  .box {
+    @media only screen and (max-width: 60em) {
+      flex-basis: 45%;
+    }
+    @media only screen and (max-width: 30em) {
+      flex-basis: 90%;
+    }
+  }
+
+  .row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid currentColor;
+    padding-top: 2rem;
+
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 27.5em) {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  .social-link {
+    padding: 0.5rem 1rem;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+
+  .row-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: inherit;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .list {
+    list-style: none;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 1rem;
+    .link-icon {
+        font-size: 1.2rem;
+    }
+  }
+
+  .link {
+    &:link,
+    &:visited {
+      font-weight: 300;
+      color: black;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .dropdown {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: black;
+    width: 24rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid currentColor;
+    background-color: transparent;
+    outline-color: currentColor;
+    cursor: pointer;
+
+    @media only screen and (max-width: 50em) {
+      width: 100%;
+    }
+  }
+
+  .dropdown-item {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: black;
+    background-color: white;
+    margin: 1rem 0;
+  }
+  .icon {
+    font-size: 2rem;
+  }
+  .logo {
+    height: 4rem;
+    width: auto;
+    margin: 2rem;
+  }
+}
