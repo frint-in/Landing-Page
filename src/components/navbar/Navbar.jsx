@@ -11,6 +11,10 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -44,22 +48,22 @@ const Navbar = () => {
 
       <ul className={`links ${isNavOpen ? "open" : ""}`}>
         <li className="link">
-          <Link className="a" to="/internship">
+          <Link className="a" to="/internship" onClick={closeNav}>
             Internships
           </Link>
         </li>
         <li className="link">
-          <Link className="a" to="/about">
+          <Link className="a" to="/about" onClick={closeNav}>
             About
           </Link>
         </li>
         <li className="link">
-          <Link className="a" to="/blog">
+          <Link className="a" to="/blog" onClick={closeNav}>
             Blog
           </Link>
         </li>
         <li className="link">
-          <Link className="a" to="/contact">
+          <Link className="a" to="/contact" onClick={closeNav}>
             Contact
           </Link>
         </li>
