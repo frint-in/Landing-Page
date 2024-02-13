@@ -1,10 +1,12 @@
-import React from 'react'
-import './blog.scss'
+import React from "react";
+import "./blog.scss";
 
 const Blog = () => {
   return (
-    <div className='Blog'>Blog</div>
-  )
-}
+    <div className="Blog">
+      <div className="header"></div>
+    </div>
+  );
+};
 
-export default Blog
+export default Blog;
