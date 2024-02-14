@@ -1,9 +1,9 @@
 .Card {
   display: block;
   height: 25rem;
-  border: 1px solid black;
-  width: 20rem;
-  border-radius: 20px;
+  border: 0.1rem solid black;
+  width: 20.2rem;
+  border-radius: 2rem;
   padding: 0.5rem;
   margin: 1rem;
   @media (max-width:450px) {
@@ -15,7 +15,7 @@
     .topbox {
       width: 19rem;
       height: 20rem;
-      border-radius: 20px;
+      border-radius: 2rem;
       padding: 1rem;
       .top {
         display: flex;
@@ -64,7 +64,10 @@
       align-items: center;
       margin: 1rem;
       .stipend {
-        font-size: 1rem;
+        font-size: 0.8rem;
+        p {
+          color: #888;
+        }
       }
       .button {
         all: unset;

@@ -19,18 +19,23 @@ const Card = (props) => {
             {props.level} {props.title}
           </div>
           <div className="tag">
-            {props.tag && props.tag.map((tagItem, index) => (
-              <div key={index} className="tag-items">
-                {tagItem}
-              </div>
-            ))}
+            {props.tag &&
+              props.tag.map((tagItem, index) => (
+                <div key={index} className="tag-items">
+                  {tagItem}
+                </div>
+              ))}
           </div>
         </div>
         <div className="bottom">
           <div className="stipend">
-            Stipend: ₹ {props.stipend}
+            <b>Stipend: ₹ {props.stipend} </b>
+            <br />
+            <p>{props.location}</p>
           </div>
-          <Link className="button" to={props.link}>Details</Link>
+          <Link className="button" to={props.link}>
+            Details
+          </Link>
         </div>
       </Link>
     </div>

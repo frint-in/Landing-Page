@@ -35,6 +35,7 @@ const Internship = () => {
               tag={int.tag}
               stipend={int.stipend}
               link={int.link}
+              location={int.location}
               color={colors[index % colors.length]} 
             />
           ))}

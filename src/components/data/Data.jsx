@@ -7,6 +7,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -16,6 +17,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -25,6 +27,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -34,6 +37,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -43,6 +47,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -52,6 +57,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
     {
@@ -61,6 +67,7 @@ const Data = () => {
       title: "UI/UX Designer",
       stipend: "5000",
       link: "/internship",
+      location: "Guwahati, Assam",
       tag: ["part-time", "senior level", "remote", "Project work"],
     },
 
