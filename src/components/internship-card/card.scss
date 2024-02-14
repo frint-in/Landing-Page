@@ -1,7 +1,78 @@
 .Card {
-    display: block;
-    height: 25rem;
-    background-color: gray;
-    width: 20rem;
-    border-radius: 20px;
+  display: block;
+  height: 25rem;
+  border: 1px solid black;
+  width: 20rem;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin: 1rem;
+  @media (max-width:450px) {
+    margin: 0.5rem 0;
+  }
+  .link {
+    all: unset;
+    cursor: pointer;
+    .topbox {
+      width: 19rem;
+      height: 20rem;
+      border-radius: 20px;
+      padding: 1rem;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .date {
+          background-color: white;
+          padding: 0.2rem 0.5rem;
+          border-radius: 20px;
+        }
+        .bookmark {
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 2rem;
+        }
+      }
+      .company {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 1.8rem;
+      }
+      .tag {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .tag-items {
+          border: 1px solid black;
+          background: transparent;
+          border-radius: 10px;
+          font-size: 0.8rem;
+          margin: 0.5rem 0;
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+    .bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem;
+      .stipend {
+        font-size: 1rem;
+      }
+      .button {
+        all: unset;
+        background-color: black;
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 2rem;
+      }
+    }
+  }
 }

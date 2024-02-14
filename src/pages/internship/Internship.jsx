@@ -1,62 +1,43 @@
 import React, { useState } from "react";
 import "./internship.scss";
 import Filter from "../../components/filter/Filter";
-import { VscSettings } from "react-icons/vsc";
 import Card from "../../components/internship-card/Card";
-
+import Data from "../../components/data/Data";
 
 const Internship = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [sort, setSort] = useState();
+  const internship = Data();
 
-  const handleOptionClick = (option) => {
-    setCategory(option);
-    setDropdownOpen(false);
-  };
-
-  const options = [
-    "Sales Event",
-    "Tech Event",
-    "Design Event",
-    "Marketing Event",
+  const colors = [
+    "#FFDBB0",
+    "#B6FFB0",
+    "#EAB0FF",
+    "#B0D9FF",
+    "#FFB0B5",
+    "#FFF7B0",
   ];
-  
+
   return (
     <div className="Internship">
       <div className="header"></div>
       <Filter />
       <div className="headerdiv">
         <div className="headtext">Recommended Internships</div>
-        <div className="Dropdown">
-          <div
-            className={`dropdown-header ${dropdownOpen ? "open" : ""}`}
-            onClick={() => setDropdownOpen(!dropdownOpen)}
-          >
-            {sort ? sort : "Sorted by"}
-            <div className="custom-down-icon">
-              <VscSettings />
-            </div>
-          </div>
-          {dropdownOpen && (
-            <div className="options">
-              {options.map((option) => (
-                <div
-                  key={option}
-                  className="option"
-                  onChange={() => handleOptionClick(option)}
-                  onClick={() => handleOptionClick(option)}
-                  value={sort}
-                  required
-                >
-                  {option}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
       <div className="body">
-        <Card />
+        {internship &&
+          internship.map((int, index) => (
+            <Card
+              key={index}
+              date={int.date}
+              company={int.company}
+              title={int.title}
+              level={int.level}
+              tag={int.tag}
+              stipend={int.stipend}
+              link={int.link}
+              color={colors[index % colors.length]} 
+            />
+          ))}
       </div>
     </div>
   );

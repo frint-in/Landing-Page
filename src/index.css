@@ -12,3 +12,8 @@
     height: 10vh;
     width: 100%;
 }
+@media (max-height: 768px) {
+    .header {
+        height: 12vh;
+    }
+}

@@ -67,7 +67,7 @@ const Filter = () => {
         <div
           style={{
             width: isOpen ? "18rem" : "4.5rem",
-            height: isOpen ? "86vh" : "7vh",
+            height: isOpen ? "86vh" : "4rem",
           }}
           className="container"
         >
