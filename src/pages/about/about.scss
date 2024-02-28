@@ -1,3 +1,68 @@
 .About {
-    display: block;
-}
+    .about-us {
+      display: flex;
+      height: 100vh; 
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      padding: 5rem;
+    }
+  
+    .heading {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: 2.2rem;
+    }
+  
+    .container {
+      display: flex;
+      height: auto; 
+      justify-content: center;
+      padding: 5rem;
+      margin-left: 8rem;
+    
+        .left-container {
+        display: flex;
+        flex-direction: column; 
+        font-size: 1.8rem;
+        }
+    
+        .left-container p {
+        width: 60%;
+        text-align: justify;
+        }
+    
+        .right-container img {
+        width: 100%;
+        }
+    }   
+    .collaborations {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+  
+  /* Responsive CSS */
+  
+  /* Adjustments for tablet and mobile */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Adjusted to column layout for better alignment on smaller screens */
+      align-items: center; /* Center-align items on smaller screens */
+      padding: 2rem; /* Reduced padding for smaller screens */
+      margin-left: 0; /* Removed left margin on smaller screens */
+    }
+  
+    .left-container p {
+      width: 100%; /* Adjusted width to 100% for full-width paragraphs on smaller screens */
+    }
+  
+    .right-container img {
+      width: 100%; /* Adjusted width to 100% for full-width images on smaller screens */
+    }
+  }
+  
+
