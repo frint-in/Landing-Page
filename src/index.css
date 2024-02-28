@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background-color: black;
+    height: 10vh;
+    width: 100%;
+}
+@media (max-height: 768px) {
+    .header {
+        height: 12vh;
+    }
 }

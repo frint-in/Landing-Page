@@ -1,3 +1,29 @@
 .Internship {
-    display: block;
+  display: block;
+  flex-wrap: wrap;
+  .headerdiv {
+    margin-left: 20vw;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    .headtext {
+      font-size: 2rem;
+      color: black;
+    }
+  }
+  .body {
+    margin-left: 20vw;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  @media (max-width: 775px) {
+    .headerdiv, .body {
+      margin-left: 5vw;
+    }
+  }
 }

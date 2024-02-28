@@ -1,5 +1,6 @@
 import React from "react";
 import "./about.scss";
+<<<<<<< HEAD
 const About = () => {
   const logos = [
     "/1.png",
@@ -89,4 +90,15 @@ const About = () => {
   );
 };
 
+=======
+
+const About = () => {
+  return (
+    <div className="About">
+      <div className="header"></div>
+    </div>
+  );
+};
+
+>>>>>>> 348f68c3930445dba608fde6064dec9cac8794a0
 export default About;

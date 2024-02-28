@@ -34,7 +34,7 @@ const Contact = () => {
                     <input type="number" id="phoneNumber" placeholder="Phone Number" />
                   </div>
                   <div class="input-msg">
-                    <input type ="text" id="message"  placeholder="How can we help?"></input>
+                    <input type ="textarea" id="message"  placeholder="How can we help?"></input>
                   </div>
                 </div>
               <button type="submit" class="button">Submit</button>                
