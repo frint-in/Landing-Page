@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
 * {
     margin: 0;
@@ -11,6 +12,12 @@
     background-color: black;
     height: 10vh;
     width: 100%;
+}
+.business {
+    color: #009387;
+    font-family: "Covered By Your Grace", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 @media (max-height: 768px) {
     .header {
