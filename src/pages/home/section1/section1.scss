@@ -1,6 +1,8 @@
 .Section1 {
   .head {
-    margin: 3rem 0;
+    // margin: 3rem 0;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -12,6 +14,11 @@
       color: #009387;
     }
   }
+  @media (max-width: 1000px) {
+    .head {
+      font-size: 2rem;
+    }
+  }
   .slider {
     background: white;
     // box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
@@ -19,7 +26,7 @@
     margin: 3rem 0;
     overflow: hidden;
     position: relative;
-    width: 90vw;
+    // width: 90vw;
     &::before,
     &::after {
       background: linear-gradient(
