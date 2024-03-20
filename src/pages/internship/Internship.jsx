@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./internship.scss";
 import Filter from "../../components/filter/Filter";
 import Card from "../../components/internship-card/Card";
-import Data from "../../components/data/Data";
+import { getAllInterships } from "../../components/api/Student";
+import dayjs from "dayjs";
+
 
 const Internship = () => {
-  const internship = Data();
+  const [internship, setInternship] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getAllInterships();
+        setInternship(data); 
+      } catch (error) {
+        console.error("Error fetching internships:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const colors = [
     "#FFDBB0",
@@ -19,26 +33,24 @@ const Internship = () => {
   return (
     <div className="Internship">
       <div className="header"></div>
-      <Filter />
+      {/* <Filter /> */}
       <div className="headerdiv">
         <div className="headtext">Recommended Internships</div>
       </div>
       <div className="body">
-        {internship &&
-          internship.map((int, index) => (
-            <Card
-              key={index}
-              date={int.date}
-              company={int.company}
-              title={int.title}
-              level={int.level}
-              tag={int.tag}
-              stipend={int.stipend}
-              link={int.link}
-              location={int.location}
-              color={colors[index % colors.length]} 
-            />
-          ))}
+        {internship?.map((int, index) => (
+          <Card
+            key={index}
+            date={dayjs(int.createdAt).format("DD-MM-YYYY")}
+            stipend={int.stipend || "not given"}
+            company={int.companyName}
+            title={int.name}
+            tag={int.type}
+            location={int.location}
+            link="/auth"
+            color={colors[index % colors.length]}
+          />
+        ))}
       </div>
     </div>
   );

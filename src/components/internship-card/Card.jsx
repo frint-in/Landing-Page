@@ -19,12 +19,13 @@ const Card = (props) => {
             {props.level} {props.title}
           </div>
           <div className="tag">
-            {props.tag &&
+            <div className="tag-items">{props.tag}</div>
+            {/* &&
               props.tag.map((tagItem, index) => (
                 <div key={index} className="tag-items">
                   {tagItem}
                 </div>
-              ))}
+              )) */}
           </div>
         </div>
         <div className="bottom">
