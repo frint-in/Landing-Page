@@ -70,12 +70,12 @@ const Navbar = () => {
       </ul>
       <div className="auth">
         <div className="link">
-          <Link className="a" to="/auth">
+          <Link className="a" to="https://student.frint.in">
             Log in
           </Link>
         </div>
         <div className="button">
-          <Link className="a" to="/auth">
+          <Link className="a" to="https://student.frint.in/sign-up">
             Register
           </Link>
         </div>
