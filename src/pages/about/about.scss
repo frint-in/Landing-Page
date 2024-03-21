@@ -101,6 +101,7 @@
 
     @media screen and (max-width: 1025px) {
       height: auto;
+      padding-top: 0;
     }
   }
 
@@ -121,9 +122,10 @@
 
     @media screen and (max-width: 1025px) {
       flex-direction: column;
+      padding: 2rem;
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 515px) {
       padding: 0rem;
     }
     .left-container {
