@@ -72,6 +72,9 @@
     padding: 0.3rem 1rem;
     border-radius: 100px;
   }
+  .login {
+    display: none;
+  }
 
   @media (max-width: 1200px) {
     .links {
@@ -88,7 +91,9 @@
     .auth {
       display: none;
     }
-
+    .login {
+      display: block;
+    }
     .hamburger {
       display: block;
       cursor: pointer;
@@ -143,7 +148,7 @@
       top: 100%;
       margin-top: 0.5rem;
       left: 0;
-      width: 100%;  
+      width: 100%;
       padding: 2rem;
       background-color: #0066ff88;
       -webkit-backdrop-filter: blur(5px);

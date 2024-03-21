@@ -67,6 +67,11 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+        <li className="link login">
+          <Link className="a" to="https://student.frint.in">
+            Log in
+          </Link>
+        </li>
       </ul>
       <div className="auth">
         <div className="link">
