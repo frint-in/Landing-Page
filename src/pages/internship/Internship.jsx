@@ -35,7 +35,7 @@ const Internship = () => {
       <div className="header"></div>
       {/* <Filter /> */}
       <div className="headerdiv">
-        <div className="headtext">Recommended Internships</div>
+        <div className="headtext">Active Internships</div>
       </div>
       <div className="body">
         {internship?.map((int, index) => (
@@ -47,7 +47,7 @@ const Internship = () => {
             title={int.name}
             tag={int.type}
             location={int.location}
-            link="/auth"
+            link="https://student.frint.in"
             color={colors[index % colors.length]}
           />
         ))}
