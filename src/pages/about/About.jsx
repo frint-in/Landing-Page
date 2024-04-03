@@ -27,7 +27,7 @@ const About = () => {
             </p>
           </div>
           <div className="right-container">
-            <img src="./pp.png" alt="" />
+            <img src="./Hiring.jpg" alt="" />
           </div>
         </div>
 
