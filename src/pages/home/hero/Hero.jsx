@@ -26,7 +26,7 @@ const Hero = () => {
               required=""
               onInput={() => checkEmpty()}
             /> */}
-          <Link to="/" target="blank" style={{textDecoration: "none"}}>
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLScspKyvgZPGYuCCfZK9UzeW6AH7TonKjfxI3J-uOuCiyRmNWA/viewform" target="blank" style={{textDecoration: "none"}}>
             <button type="submit" className="btn">
               <span>Join our Community</span>
               <ion-icon name="arrow-forward-outline" />
