@@ -26,12 +26,14 @@ const Hero = () => {
               required=""
               onInput={() => checkEmpty()}
             /> */}
-          <Link to="https://docs.google.com/forms/d/e/1FAIpQLScspKyvgZPGYuCCfZK9UzeW6AH7TonKjfxI3J-uOuCiyRmNWA/viewform" target="blank" style={{textDecoration: "none"}}>
+          <div className="btn-div">
             <button type="submit" className="btn">
-              <span>Join our Community</span>
-              <ion-icon name="arrow-forward-outline" />
+              <Link to="https://student.frint.in" target="blank" style={{ all: "unset", textDecoration: "none" }}>
+                <span>Participate Now</span>
+                <ion-icon name="arrow-forward-outline" />
+              </Link>
             </button>
-          </Link>
+          </div>
           {/* </form> */}
         </div>
         <div className="users-color-container">
@@ -47,7 +49,7 @@ const Hero = () => {
           <img className="item" style={{ "--i": 10 }} alt="" />
           <span className="item" style={{ "--i": 11 }} />
           <img className="item" style={{ "--i": 12 }} alt="" /> */}
-          <img src="/photo.png" alt="" width={"90%"} />
+          <img src="/summer-internship1.png" alt="" width={"100%"} style={{marginTop: "60px"}}/>
         </div>
       </div>
     </div>

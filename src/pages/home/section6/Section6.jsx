@@ -10,9 +10,9 @@ const Section6 = () => {
       <div className="box">
         <h1>Join 2000+ users today</h1>
         <p>Start for free</p>
-        <p>Joining as an Company?</p>
-        <Link to="/login" className="link">
-          Sign up free <FaArrowUp />
+        <p>A platform made by students for students</p>
+        <Link to="https://docs.google.com/forms/d/e/1FAIpQLScspKyvgZPGYuCCfZK9UzeW6AH7TonKjfxI3J-uOuCiyRmNWA/viewform" target="blank" className="link">
+          Join our community <FaArrowUp />
         </Link>
       </div>
     </div>

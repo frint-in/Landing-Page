@@ -13,7 +13,7 @@ const Section4 = () => {
             Whether you are tech enthusiast, or a UI Designer, Frint helps you
             make connections with the best in your category.
           </p>
-          <Link to="/" className="link">
+          <Link to="https://student.frint.in/" className="link">
             Learn more <FaArrowRight />
           </Link>
         </div>

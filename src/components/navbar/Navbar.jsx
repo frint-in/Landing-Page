@@ -1,11 +1,31 @@
 import React, { useState, useEffect } from "react";
-import "./navbar.scss";
 import { Link } from "react-router-dom";
 import logo from "/logo.png";
+import "./navbar.scss";
+import Dropdown from "../dropdown/Dropdown";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [logindropdownOpen, setLoginDropdownOpen] = useState(false);
+  const [registerdropdownOpen, setRegisterDropdownOpen] = useState(false);
+
+  const handleLoginDropdown = () => {
+    console.log("handleLoginDropdown");
+    if (!logindropdownOpen && registerdropdownOpen) {
+      setRegisterDropdownOpen(false)
+    }
+    setLoginDropdownOpen(!logindropdownOpen);
+  };
+
+  const handleRegisterDropdown = () => {
+    console.log("handleLoginDropdown");
+    if (!registerdropdownOpen && logindropdownOpen) {
+      setLoginDropdownOpen(false)
+    }
+    setRegisterDropdownOpen(!registerdropdownOpen);
+  };
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -36,7 +56,7 @@ const Navbar = () => {
         to="/"
         className="logo"
       >
-        <img src={logo} alt="" width={120}/>
+        <img src={logo} alt="" width={120} />
         {/* FRINT */}
       </Link>
 
@@ -67,22 +87,19 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li className="link login">
-          <Link className="a" to="https://student.frint.in">
-            Log in
-          </Link>
+        <li className="link login" onClick={() => handleLoginDropdown()}>
+        <Dropdown name={"Login"}  dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </li>
+        <li className="link login" onClick={() => handleRegisterDropdown()}>
+          <Dropdown name={"Register"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Register as a Company"} option2={"Register as a Student"} />
+          </li>
       </ul>
       <div className="auth">
-        <div className="link">
-          <Link className="a" to="https://student.frint.in">
-            Log in
-          </Link>
+        <div className="link" onClick={() => handleLoginDropdown()}>
+          <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </div>
-        <div className="button">
-          <Link className="a" to="https://student.frint.in/sign-up">
-            Register
-          </Link>
+        <div className="button" onClick={() => handleRegisterDropdown()}>
+          <Dropdown name={"Register"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Register as a Company"} option2={"Register as a Student"} />
         </div>
       </div>
     </div>

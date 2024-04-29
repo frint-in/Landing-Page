@@ -58,7 +58,7 @@
       cursor: pointer;
       .Card {
         all: unset;
-        height: 40vh;
+        height: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -163,5 +163,11 @@
     font-size: 1.5rem;
     color: white;
     gap: 0.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background: #022cff;
+      transition: 0.3s;
+    }
   }
 }

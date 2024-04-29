@@ -8,19 +8,19 @@ const Section2 = () => {
     {
       title: "Free forever",
       para: "We are FREE. Join Frint's community and seize the opportunity to enhance your skills, build your network, and kickstart your career—all without spending a dime.",
-      link: "",
+      link: "https://student.frint.in/admin/internships",
       image: "",
     },
     {
       title: "Industry-Relevant Training",
       para: "Frint collaborates with leading industry experts to develop curriculum content that aligns with the latest trends and demands in various fields.",
-      link: "",
+      link: "https://student.frint.in/admin/internships",
       image: "",
     },
     {
       title: "Networking opportunities",
       para: "Connect with professionals, mentors, and fellow interns through our extensive network. Frint provides exclusive networking events, workshops, and seminars to foster meaningful connections.",
-      link: "",
+      link: "https://student.frint.in/admin/internships",
       image: "",
     },
   ];
@@ -54,7 +54,7 @@ const Section2 = () => {
           </div>
         ))}
       </div>
-      <Link to='/login' className="link">Sign up free <FaArrowUp /></Link>
+      <Link to='https://company.frint.in/' className="link">Register as a Company<FaArrowUp /></Link>
     </div>
   );
 };

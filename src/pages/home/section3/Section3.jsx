@@ -14,7 +14,7 @@ const Section3 = () => {
             In the office, remote, or a mix of the two, through Frint,
             collaborate, and co-create in one space no matter where you are.
           </p>
-          <Link to='/' className="link">Learn more <FaArrowRight /></Link>
+          <Link to='https://student.frint.in/' className="link">Learn more <FaArrowRight /></Link>
         </div>
         
         <div className="right">
