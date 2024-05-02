@@ -7,7 +7,6 @@ import About from "./pages/about/About";
 import Blog from "./pages/blog/Blog";
 import Contact from "./pages/contact/Contact";
 import Faq from "./pages/support/Faq"
-import Auth from "./components/auth/Auth";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import TermsConditons from "./pages/support/TermsConditons";
@@ -41,7 +40,6 @@ function AppContent() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/terms-conditions" element={<TermsConditons />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/auth" element={<Auth />} />
       </Routes>
       {shouldHideFooter && <Footer />}
     </>
