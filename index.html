@@ -5,8 +5,40 @@
     <link rel="icon" href="/logo-small.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frint</title>
+    <style>
+      .loading {
+        -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+        animation: sk-scaleout 1s infinite ease-in-out;
+      }
+
+      .mainloader {
+        align-items: center;
+        background-color: white;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          opacity: 0.5;
+        }
+        100% {
+          -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+          rotate: 360deg;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="spinner" class="mainloader">
+      <!-- <div class="loading"></div> -->
+      <img src="/public/logo.png" class="loading"/>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

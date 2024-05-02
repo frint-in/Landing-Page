@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home/Home";
@@ -16,10 +16,20 @@ const hideNavbarPaths = ["/", "/internship", "/about", "/blog", "/contact", "/fa
 const hideFooterPaths = ["/", "/internship", "/about", "/blog", "/faq", "/terms-conditions", "/privacy-policy"];
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    !loading && (
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    )
   );
 }
 
