@@ -7,12 +7,10 @@ import Dropdown from "../dropdown/Dropdown";
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [dropdownVisible, setDropdownVisible] = useState(false);
   const [logindropdownOpen, setLoginDropdownOpen] = useState(false);
   const [registerdropdownOpen, setRegisterDropdownOpen] = useState(false);
 
   const handleLoginDropdown = () => {
-    console.log("handleLoginDropdown");
     if (!logindropdownOpen && registerdropdownOpen) {
       setRegisterDropdownOpen(false)
     }
@@ -20,7 +18,6 @@ const Navbar = () => {
   };
 
   const handleRegisterDropdown = () => {
-    console.log("handleLoginDropdown");
     if (!registerdropdownOpen && logindropdownOpen) {
       setLoginDropdownOpen(false)
     }
@@ -77,11 +74,11 @@ const Navbar = () => {
             About
           </Link>
         </li>
-        <li className="link">
+        {/* <li className="link">
           <Link className="a" to="/blog" onClick={closeNav}>
             Blog
           </Link>
-        </li>
+        </li> */}
         <li className="link">
           <Link className="a" to="/contact" onClick={closeNav}>
             Contact

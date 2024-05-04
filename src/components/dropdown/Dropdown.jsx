@@ -20,7 +20,6 @@ const Dropdown = (props) => {
                         <Link
                             to={props.link1}
                             className="option"
-                            style={{color: "#000"}}
                         >{props.option1}
                         </Link>
                     </div>
@@ -29,7 +28,6 @@ const Dropdown = (props) => {
                         <Link
                             to={props.link2}
                             className="option"
-                            style={{color: "#000"}}
                         >{props.option2}
                         </Link>
                     </div>
