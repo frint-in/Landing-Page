@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "/logo.png";
 import "./navbar.scss";
 import Dropdown from "../dropdown/Dropdown";
@@ -9,6 +9,8 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [logindropdownOpen, setLoginDropdownOpen] = useState(false);
   const [registerdropdownOpen, setRegisterDropdownOpen] = useState(false);
+
+  const location = useLocation();
 
   const handleLoginDropdown = () => {
     if (!logindropdownOpen && registerdropdownOpen) {
@@ -36,15 +38,38 @@ const Navbar = () => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const scrollThreshold = window.innerHeight * 0.1;
-      setIsScrolled(scrollPosition > scrollThreshold);
+      if (scrollPosition > scrollThreshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Check if the current path is the homepage or contact page
+    const isSpecialPage = location.pathname === "/" || location.pathname === "/contact";
+
+if (isSpecialPage) {
+      // Set the initial scroll state based on the current scroll position
+      const initialScrollPosition = window.scrollY;
+      const scrollThreshold = window.innerHeight * 0.1;
+      if (initialScrollPosition > scrollThreshold) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+
+      // Add scroll event listener to update the scroll state
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      setIsScrolled(true); // Apply scrolled class by default for other pages
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (isSpecialPage) {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
-  }, []);
+  }, [location]); // Add locatio 
 
   return (
     <div className={`Navbar ${isScrolled ? "scrolled" : ""}`}>

@@ -31,6 +31,7 @@
     @media only screen and (max-width: 60em) {
       flex-basis: 45%;
     }
+
     @media only screen and (max-width: 30em) {
       flex-basis: 90%;
     }
@@ -51,12 +52,26 @@
     }
   }
 
-  .social-link {
-    padding: 0.5rem 1rem;
-    &:link,
-    &:visited {
-      text-decoration: none;
-      color: currentColor;
+  .social-icons-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .footer-social-link {
+      color: black;
+      display: flex;
+      align-self: center;
+      transition: 0.3s;
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: currentColor;
+      }
+      &:hover {
+        color: #0463fd;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -86,12 +101,14 @@
     align-items: center;
     margin: 1rem 0;
     gap: 1rem;
+
     .link-icon {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
   }
 
   .link {
+
     &:link,
     &:visited {
       font-weight: 300;
@@ -133,9 +150,11 @@
     background-color: white;
     margin: 1rem 0;
   }
+
   .icon {
     font-size: 2rem;
   }
+
   .logo {
     height: 4rem;
     width: auto;

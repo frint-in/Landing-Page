@@ -9,7 +9,7 @@
 }
 
 .header {
-    background-color: black;
+    background-color: #fff;
     height: 120px;
     width: 100%;
 }
@@ -19,8 +19,22 @@
     font-weight: 400;
     font-style: normal;
 }
+
+.globalheader {
+    width: 60%;
+}
 @media (max-height: 768px) {
     .header {
         height: 12vh;
     }
 }
+@media (max-width: 768px) {
+    .header {
+        height: 12vh;
+    }
+    .globalheader {
+        width: 90%;
+    }
+}
+
+

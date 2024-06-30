@@ -31,11 +31,11 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
-              <li className="item">
+              {/* <li className="item">
                 <Link to="/blog" className="link">
                   blogs
                 </Link>
-              </li>
+              </li> */}
               <li className="item">
                 <Link to="/contact" className="link">
                   Contact us
@@ -71,11 +71,11 @@ const Footer = () => {
                   Get Help
                 </Link>
               </li>
-              <li className="item">
+              {/* <li className="item">
                 <Link to="/faq" className="link">
                   FAQs
                 </Link>
-              </li>
+              </li> */}
               <li className="item">
                 <Link to="/privacy-policy" className="link">
                   Privacy Policy
@@ -94,8 +94,8 @@ const Footer = () => {
               <li className="item">
                 <FaLocationDot className="link-icon"/>
                 <Link to="#" className="link">
-                  Assam Engineering College,
-                  <br /> Jalukbari, Guwahati, Assam
+                  Assam Startup, Ambari,
+                  <br />Guwahati, Assam
                 </Link>
               </li>
               <li className="item">
@@ -106,8 +106,8 @@ const Footer = () => {
               </li>
               <li className="item">
                 <FaEnvelope className="link-icon"/>
-                <Link to="mailto:contact@frint.in" className="link">
-                  contact@frint.in
+                <Link to="mailto:office@frint.in" className="link">
+                  office@frint.in
                 </Link>
               </li>
             </ul>
@@ -116,13 +116,13 @@ const Footer = () => {
         <div className="row-2 u-margin-top-small">
           <p className="copyright">© 2024 Frint. All rights reserved.</p>
           <div className="social-icons-box">
-            <Link to="#" className="social-link">
-              <FaFacebook className="icon" />
+            <Link to="mailto:office@frint.in" className="footer-social-link">
+              <FaEnvelope className="icon" />
             </Link>
-            <Link to="https://www.instagram.com/frint.in/" className="social-link">
+            <Link to="https://www.instagram.com/frint.in/" className="footer-social-link">
               <FaInstagram className="icon" />
             </Link>
-            <Link to="https://linkedin.com/company/frint-in" className="social-link">
+            <Link to="https://linkedin.com/company/frint-in" className="footer-social-link">
               <FaLinkedin className="icon" />
             </Link>
           </div>

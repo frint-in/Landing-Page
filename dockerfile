@@ -8,4 +8,8 @@ RUN npm install
 
 COPY . .
 
-CMD [ "npm", "run", "dev", "--" , "--host" , "0.0.0.0"]
+RUN npm run build
+
+# RUN rm -rf node_modules/ && rm -rf src/ && rm -rf public/
+
+CMD [ "npm", "run", "preview", "--" , "--host" , "0.0.0.0"]

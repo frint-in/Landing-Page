@@ -1,156 +1,3 @@
-// .Contact {
-//   .contact-us {
-//     height: 100vh;
-//     width: 100%;
-//     padding: 50px;
-//     background: linear-gradient(170deg, #000 40%, #006cff 80%);
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-
-//   .container {
-//     display: flex;
-//     justify-content: center;
-//     width: 80%;
-//     border-radius: 8px;
-//     padding: 2rem 4rem;
-//   }
-
-//   .header-left {
-//     display: flex;
-//     width: 50%;
-//     flex-direction: column;
-//   }
-
-//   .heading {
-//     color: #fff;
-//     font-weight: 700;
-//     font-size: 4rem;
-//   }
-
-//   .text-wrapped {
-//     color: rgba(255, 255, 255, 0.68);
-//     font-weight: 500;
-//     font-size: 1.5rem;
-//   }
-//   @media (max-width: 1340px) {
-//     .container {
-//       width: 95%;
-//       display: flex;
-//       // align-items: center;
-//       justify-content: center;
-//     }
-//     .heading {
-//       font-size: 3rem;
-//     }
-//     .text-wrapped {
-//       font-size: 1.5rem;
-//     }
-//   }
-
-//   .box {
-//     width: 50%;
-//     border-radius: 20px;
-//     background-color: #fff;
-//     display: flex;
-//     flex-direction: column;
-//     padding: 23px 25px 50px;
-//   }
-
-//   .header-right {
-//     color: rgba(0, 0, 0, 0.65);
-//     font-weight: 700;
-//     font-size: 3rem;
-//   }
-
-//   .text-right {
-//     color: #767676;
-//     font-weight: 500;
-//     font-size: 1.8rem;
-//   }
-
-//   .form-group {
-//     display: flex;
-//     margin-top: 1.8rem;
-//   }
-
-//   .form-grp-1 {
-//     display: flex;
-//     justify-content: space-between;
-//     width: 100%;
-//   }
-
-//   .form-input-1,
-//   .form-input-2 {
-//     flex: 1;
-//     margin-right: 5px;
-//   }
-
-//   .form input {
-//     padding: 12px;
-//     border: 1px solid #ccc;
-//     width: 100%;
-//     border-radius: 8px;
-//     font-size: 16px;
-//     margin-bottom: 18px;
-//   }
-
-//   .button {
-//     border-radius: 8px;
-//     background-color: #1877f2;
-//     color: #fff;
-//     cursor: pointer;
-//     padding: 1rem 4rem;
-//     font-weight: 500;
-//     font-size: 1.8rem;
-//   }
-
-//   @media (max-width: 991px) {
-//     .contact-us {
-//       padding: 1rem;
-//       height: auto;
-//     }
-//     .container {
-//       flex-direction: column;
-//       margin-top: 10vh;
-//       width: 100%;
-//       padding: 0;
-//       align-items: center;
-//       margin-left: 0;
-//     }
-//     .header-left {
-//       width: 95%;
-//       margin: 3rem 1rem;
-//     }
-//     .heading {
-//       width: 100%;
-//       font-size: 2.2rem;
-//     }
-//     .text-wrapped {
-//       font-size: 1.1rem;
-//       width: 100%;
-//     }
-//     .box {
-//       width: 100%;
-//       margin-bottom: 2rem;
-//     }
-//     .header-right {
-//       max-width: 100%;
-//       font-size: 2rem;
-//     }
-//     .text-right {
-//       max-width: 100%;
-//       font-size: 1.5rem;
-//     }
-//     button {
-//       font-size: 1.2rem;
-//       padding: 1rem 1.5rem;
-
-//     }
-//   }
-// }
-
 .Contact {
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -318,6 +165,16 @@
 
   .app-form-button:hover {
     color: #00a89a;
+  }
+
+  .link {
+    all: unset;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      color: #31ffee;
+      transition: 0.5s;
+    }
   }
 
   .credits {

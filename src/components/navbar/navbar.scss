@@ -1,7 +1,7 @@
 .Navbar {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  width: 90%;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  width: 95%;
   align-items: center;
   margin: 1rem auto;
   display: flex;
@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   z-index: 15;
   height: auto;
-  padding: 1rem;
+  // padding: 0.5rem;
   .logo {
     all: unset;
     color: white;
@@ -89,6 +89,8 @@
     }
   }
   @media (max-width: 1000px) {
+  padding: 0.5rem;
+  border-radius: 10px;
     .links {
       display: none;
     }
@@ -154,7 +156,7 @@
       left: 0;
       width: 100%;
       padding: 2rem;
-      background-color: #0066ff88;
+      background-color: #0463fdbb;
       -webkit-backdrop-filter: blur(5px);
       backdrop-filter: blur(5px);
       box-shadow: 0 0.5rem 1;
@@ -173,8 +175,7 @@
   }
 }
 .scrolled {
-  background: radial-gradient(circle, #00429e 0%, #000 100%);
-  // background-color: #8888;
-
-  // backdrop-filter: blur(5px);
+  // background: radial-gradient(circle, #00429e 0%, #000 100%);
+  background-color: #000d;
+  // backdrop-filter: blur(3px);
 }

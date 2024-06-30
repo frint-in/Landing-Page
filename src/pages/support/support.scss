@@ -1,9 +1,60 @@
 .TermsCondition {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin: 2rem 0;
+    }
+
+    h2 {
+        margin: 2rem 0;
+    }
+
+    h3 {
+        margin: 2rem 0;
+    }
+
+    ul {
+        margin-left: 2rem;
+    }
+
+    li {
+        margin: 1rem 0;
+    }
 }
+
+.main-head {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 .PrivacyPolicy {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        margin: 2rem 0;
+    }
+
+    h2 {
+        margin: 2rem 0;
+    }
+
+    h3 {
+        margin: 2rem 0;
+    }
+
+    ul {
+        margin-left: 2rem;
+    }
+
+    li {
+        margin: 1rem 0;
+    }
 }
+
 .Faq {
     display: block;
 }
