@@ -113,7 +113,7 @@ if (isSpecialPage) {
         <Dropdown name={"Login"}  dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </li>
         <li className="link login" onClick={() => handleRegisterDropdown()}>
-          <Dropdown name={"Register"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Register as a Company"} option2={"Register as a Student"} />
+          <Dropdown name={"Sign up"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
           </li>
       </ul>
       <div className="auth">
@@ -121,7 +121,7 @@ if (isSpecialPage) {
           <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </div>
         <div className="button" onClick={() => handleRegisterDropdown()}>
-          <Dropdown name={"Register"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Register as a Company"} option2={"Register as a Student"} />
+          <Dropdown name={"Sign up"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
         </div>
       </div>
     </div>
