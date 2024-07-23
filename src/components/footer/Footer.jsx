@@ -86,6 +86,11 @@ const Footer = () => {
                   Terms & Conditions
                 </Link>
               </li>
+              <li className="item">
+                <Link to="/return-policy" className="link">
+                  Return Policy
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="box">

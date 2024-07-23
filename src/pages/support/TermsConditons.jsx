@@ -8,6 +8,7 @@ const TermsConditons = () => {
       <div className="header"></div>
       <div className="globalheader">
         <div className="main-head">Terms and Conditions</div>
+        Last updated: April 17, 2024
         <h1>Introduction</h1>
         These Terms and Conditions ("Terms") govern your use of the Frint
         internship platform ("Platform" ) and the services offered by Frint

@@ -48,7 +48,7 @@ const Navbar = () => {
     // Check if the current path is the homepage or contact page
     const isSpecialPage = location.pathname === "/" || location.pathname === "/contact";
 
-if (isSpecialPage) {
+    if (isSpecialPage) {
       // Set the initial scroll state based on the current scroll position
       const initialScrollPosition = window.scrollY;
       const scrollThreshold = window.innerHeight * 0.1;
@@ -110,18 +110,18 @@ if (isSpecialPage) {
           </Link>
         </li>
         <li className="link login" onClick={() => handleLoginDropdown()}>
-        <Dropdown name={"Login"}  dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
+          <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </li>
         <li className="link login" onClick={() => handleRegisterDropdown()}>
-          <Dropdown name={"Sign up"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
-          </li>
+          <Dropdown name={"Sign up"} dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
+        </li>
       </ul>
       <div className="auth">
         <div className="link" onClick={() => handleLoginDropdown()}>
           <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </div>
         <div className="button" onClick={() => handleRegisterDropdown()}>
-          <Dropdown name={"Sign up"}  dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
+          <Dropdown name={"Sign up"} dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
         </div>
       </div>
     </div>

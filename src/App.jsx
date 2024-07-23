@@ -11,9 +11,10 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import TermsConditons from "./pages/support/TermsConditons";
 import PrivacyPolicy from "./pages/support/PrivacyPolicy";
+import ReturnPolicy from "./pages/support/ReturnPolicy";
 
-const hideNavbarPaths = ["/", "/internship", "/about", "/blog", "/contact", "/faq", "/terms-conditions", "/privacy-policy"];
-const hideFooterPaths = ["/", "/internship", "/about", "/blog", "/faq", "/terms-conditions", "/privacy-policy"];
+const hideNavbarPaths = ["/", "/internship", "/about", "/blog", "/contact", "/faq", "/terms-conditions", "/privacy-policy", "/return-policy"];
+const hideFooterPaths = ["/", "/internship", "/about", "/blog", "/faq", "/terms-conditions", "/privacy-policy", "/return-policy"];
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -50,6 +51,7 @@ function AppContent() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/terms-conditions" element={<TermsConditons />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/return-policy" element={<ReturnPolicy />} />
       </Routes>
       {shouldHideFooter && <Footer />}
     </>
