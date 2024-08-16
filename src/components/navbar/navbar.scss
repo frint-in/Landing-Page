@@ -34,6 +34,7 @@
 
   .link {
     text-decoration: none;
+    font-size: 1.2rem;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
@@ -73,8 +74,10 @@
     margin-left: 1rem;
     background-color: #0066ff;
     color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 100px;
+    cursor: pointer;
+    font-size: 1.2rem;
   }
   .login {
     display: none;

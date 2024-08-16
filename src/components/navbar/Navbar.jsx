@@ -14,14 +14,14 @@ const Navbar = () => {
 
   const handleLoginDropdown = () => {
     if (!logindropdownOpen && registerdropdownOpen) {
-      setRegisterDropdownOpen(false)
+      setRegisterDropdownOpen(false);
     }
     setLoginDropdownOpen(!logindropdownOpen);
   };
 
   const handleRegisterDropdown = () => {
     if (!registerdropdownOpen && logindropdownOpen) {
-      setLoginDropdownOpen(false)
+      setLoginDropdownOpen(false);
     }
     setRegisterDropdownOpen(!registerdropdownOpen);
   };
@@ -46,7 +46,8 @@ const Navbar = () => {
     };
 
     // Check if the current path is the homepage or contact page
-    const isSpecialPage = location.pathname === "/" || location.pathname === "/contact";
+    const isSpecialPage =
+      location.pathname === "/" || location.pathname === "/contact";
 
     if (isSpecialPage) {
       // Set the initial scroll state based on the current scroll position
@@ -69,15 +70,11 @@ const Navbar = () => {
         window.removeEventListener("scroll", handleScroll);
       }
     };
-  }, [location]); // Add locatio 
+  }, [location]); // Add locatio
 
   return (
     <div className={`Navbar ${isScrolled ? "scrolled" : ""}`}>
-
-      <Link
-        to="/"
-        className="logo"
-      >
+      <Link to="/" className="logo">
         <img src={logo} alt="" width={120} />
         {/* FRINT */}
       </Link>
@@ -109,20 +106,32 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li className="link login" onClick={() => handleLoginDropdown()}>
+        {/* <li className="link login" onClick={() => handleLoginDropdown()}>
           <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </li>
         <li className="link login" onClick={() => handleRegisterDropdown()}>
           <Dropdown name={"Sign up"} dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
+        </li> */}
+        <li className="link login">
+          <Link to="/error">Login</Link>
+        </li>
+        <li className="link login">
+          <Link to="/error">Sign Up</Link>
         </li>
       </ul>
       <div className="auth">
-        <div className="link" onClick={() => handleLoginDropdown()}>
+        {/* <div className="link" onClick={() => handleLoginDropdown()}>
           <Dropdown name={"Login"} dropdownOpen={logindropdownOpen} link1={"https://company.frint.in/auth"} link2={"https://student.frint.in/login"} option1={"Login as a Company"} option2={"Login as a Student"} />
         </div>
         <div className="button" onClick={() => handleRegisterDropdown()}>
           <Dropdown name={"Sign up"} dropdownOpen={registerdropdownOpen} link1={"https://company.frint.in/signup"} link2={"https://student.frint.in/sign-up"} option1={"Sign up as a Company"} option2={"Sign up as a Student"} />
-        </div>
+        </div> */}
+        <Link className="link" to="/error">
+          Login
+        </Link>
+        <Link className="button" to="/error">
+          Sign Up
+        </Link>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ import Footer from "./components/footer/Footer";
 import TermsConditons from "./pages/support/TermsConditons";
 import PrivacyPolicy from "./pages/support/PrivacyPolicy";
 import ReturnPolicy from "./pages/support/ReturnPolicy";
+import Error from "./pages/error/Error";
 
 const hideNavbarPaths = ["/", "/internship", "/about", "/blog", "/contact", "/faq", "/terms-conditions", "/privacy-policy", "/return-policy"];
 const hideFooterPaths = ["/", "/internship", "/about", "/blog", "/faq", "/terms-conditions", "/privacy-policy", "/return-policy"];
@@ -52,6 +53,7 @@ function AppContent() {
         <Route path="/terms-conditions" element={<TermsConditons />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/return-policy" element={<ReturnPolicy />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
       {shouldHideFooter && <Footer />}
     </>
